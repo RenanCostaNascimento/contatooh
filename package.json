@@ -1,0 +1,32 @@
+{
+  "name": "contatooh",
+  "version": "1.0.0",
+  "description": "Repositório criado para implementar a aplicação presente no livro MEAN - Mongo, Express, Angular, Node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenanCostaNascimento/contatooh.git"
+  },
+  "author": "Renan Nascimento",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenanCostaNascimento/contatooh/issues"
+  },
+  "homepage": "https://github.com/RenanCostaNascimento/contatooh#readme",
+  "keywords": [
+    "Node",
+    "Mongo",
+    "Angular",
+    "Express"
+  ],
+  "dependencies": {
+    "body-parser": "^1.6.7",
+    "ejs": "^0.8.8",
+    "express": "^4.8.8",
+    "express-load": "^1.1.15",
+    "method-override": "^2.1.3"
+  }
+}
