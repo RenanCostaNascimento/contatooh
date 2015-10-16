@@ -13,6 +13,10 @@ function($scope, $routeParams, Contato) {
     });
   };
 
+  Contato.query(function(contatos) {
+    $scope.contatos = contatos;
+  });
+
   if($routeParams.contatoId) {
     Contato.get({id: $routeParams.contatoId},
       function(contato) {
