@@ -4,6 +4,7 @@ var bodyParser = require('body-parser' );
 var cookieParser = require('cookie-parser' );
 var session = require('express-session' );
 var passport = require('passport' );
+var helmet = require('helmet' );
 
 module.exports = function() {
   var app = express();
@@ -26,6 +27,12 @@ module.exports = function() {
   }));
   app.use(passport.initialize());
   app.use(passport.session());
+
+  app.use(helmet());
+  app.disable ('x-powered-by' );
+  app.use(helmet.xframe());
+  app.use(helmet.xssFilter());
+  app.use(helmet.nosniff());
 
   // definir rotas deve ser a última coisa a ser feita
   load('models' , {cwd: 'app' })
